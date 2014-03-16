@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoiceRecorderViewController">
+            <connections>
+                <outlet property="activity" destination="rgY-b1-W5g" id="eMB-Mc-7wt"/>
+                <outlet property="customRangeBar" destination="JU2-e5-bPK" id="SXj-ZY-dUY"/>
+                <outlet property="playButton" destination="vZa-8A-a1w" id="9dm-ru-r5i"/>
+                <outlet property="progressView" destination="nHA-TX-Qyc" id="orI-nj-tKp"/>
+                <outlet property="recordButton" destination="H76-0b-bDk" id="gXt-8l-csn"/>
+                <outlet property="stopButton" destination="5S6-Nh-r15" id="3Xc-mU-ki7"/>
+                <outlet property="touchbutton" destination="P8v-sd-1b9" id="SoC-D0-qty"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="viewForWave" destination="soF-gw-nox" id="Er1-rP-Rx1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vZa-8A-a1w">
+                    <rect key="frame" x="250" y="193" width="50" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Play"/>
+                    <connections>
+                        <action selector="playRecording" destination="-1" eventType="touchUpInside" id="6zk-1R-aZc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H76-0b-bDk">
+                    <rect key="frame" x="12" y="193" width="50" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Record"/>
+                    <connections>
+                        <action selector="startRecording" destination="-1" eventType="touchUpInside" id="M3X-Vs-mHW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5S6-Nh-r15">
+                    <rect key="frame" x="135" y="193" width="50" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Stop"/>
+                    <connections>
+                        <action selector="stopButton:" destination="-1" eventType="touchUpInside" id="LLj-M8-t5j"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" id="soF-gw-nox">
+                    <rect key="frame" x="0.0" y="356" width="320" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="nHA-TX-Qyc">
+                    <rect key="frame" x="12" y="404" width="297" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </progressView>
+                <view contentMode="scaleToFill" id="JU2-e5-bPK" customClass="F3BarGauge">
+                    <rect key="frame" x="0.0" y="414" width="320" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eb5-eb-YEB">
+                    <rect key="frame" x="143" y="269" width="34" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Save">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="saveVoice" destination="-1" eventType="touchUpInside" id="Xs5-yA-gJV"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="rgY-b1-W5g">
+                    <rect key="frame" x="142" y="222" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P8v-sd-1b9">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="1" green="0.70686817850000006" blue="0.31202368130000002" alpha="1" colorSpace="calibratedRGB"/>
+            <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+            <state key="normal" title="Hold &amp; Talk">
+                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+            <state key="highlighted">
+                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            </state>
+        </button>
+    </objects>
+</document>
